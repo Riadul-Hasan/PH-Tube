@@ -5,18 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PH Tube</title>
+    <!-- tailwind cdn -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <!-- Daisy UI CDN -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!-- tailwind cdn -->
-    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {},
+            },
+            plugins: [window.daisyui], // Enable DaisyUI
+        };
+    </script>
 
 </head>
 
 <body class="container mx-auto">
 
-    <header class="mt-6">
-        <nav>
+    <header class="mt-6 ">
+        <nav class="border-b-2">
             <div class="navbar bg-base-100 shadow-sm">
                 <div class="navbar-start">
                     <div class="dropdown">
@@ -45,15 +54,30 @@
                             <span class="badge badge-xs badge-primary indicator-item"></span>
                         </div>
                     </button> -->
-                    <button class="btn btn-primary bg-red-500 text-white w-1/6 font-semibold">Blog</button>
+                    <button class="btn btn-primary border-none bg-red-500 text-white w-1/6 font-semibold">Blog</button>
 
 
                 </div>
             </div>
         </nav>
+
+
+        <section class="mt-10">
+            <div id="category-container" class="flex justify-center gap-5">
+                <button class="btn btn-sm bg-red-500 text-white">All</button>
+
+
+
+            </div>
+        </section>
+
+
     </header>
 
 
+
+
+    <script src="script/index.js"></script>
 </body>
 
 
